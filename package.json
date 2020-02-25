@@ -1,6 +1,6 @@
 {
-  "name": "typemoq",
-  "version": "2.1.0",
+  "name": "@ccosmincc/typemoq",
+  "version": "2.2.1",
   "description": "A simple mocking library for TypeScript",
   "author": "Florin Nitoi <florin.nitoi@gmail.com>",
   "license": "MIT",
@@ -15,9 +15,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:florinn/typemoq.git"
+    "url": "git+ssh://git@github.com/ccosmincc/typemoq.git"
   },
-  "bugs": "https://github.com/florinn/typemoq/issues",
+  "bugs": {
+    "url": "https://github.com/florinn/typemoq/issues"
+  },
   "keywords": [
     "mock",
     "stub",
@@ -30,8 +32,7 @@
     "typescript"
   ],
   "scripts": {
-    "build": "gulp build",
-    "postinstall": "node build/postinstall.js"
+    "build": "gulp build"
   },
   "dependencies": {
     "circular-json": "^0.3.1",
@@ -73,5 +74,6 @@
   },
   "engines": {
     "node": ">=6.0.0"
-  }
+  },
+  "homepage": "https://github.com/ccosmincc/typemoq#readme"
 }

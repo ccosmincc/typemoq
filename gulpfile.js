@@ -114,7 +114,7 @@ gulp.task('dts-bundle:src', function () {
 
 gulp.task('copy-dts-bundle:src', ['dts-bundle:src'], function () {
 	return gulp.src([srcOpts.outDefPath + '/typemoq-dts-bundle.d.ts'])
-		.pipe($.replace('typemoq-dts-bundle', 'typemoq'))
+		.pipe($.replace('typemoq-dts-bundle', '@ccosmincc/typemoq'))
 		.pipe($.rename('typemoq.d.ts'))
 		.pipe(gulp.dest(srcOpts.outBundlePath))
 		.pipe($.size());
@@ -232,8 +232,8 @@ gulp.task('test:mocha.es6', function () {
 
 function runMocha(srcPath) {
 	return gulp.src(srcPath)
-		.pipe($.spawnMocha({ 
-			ui: 'bdd', 
+		.pipe($.spawnMocha({
+			ui: 'bdd',
 			reporter: 'spec',
 			env: {'NODE_PATH': './.tmp/src'}
 		}))
